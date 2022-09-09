@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  <h1><a href="playwithgptru.ml">PlayWithGPTru.ml</a></h1>
+  <div id="generationMenu">
+    <p>Варианты стилизации:</p>
+    <label>
+      <input checked name="generationMode" type="radio" value="noStyle">
+      Без стиля
+    </label>
+    <label>
+      <input name="generationMode" type="radio" value="boyQuotes">
+      Пацанские цитаты
+    </label>
+    <label>
+      <input name="generationMode" type="radio" value="instructions">
+      Инструкции по применению
+    </label>
+    <label>
+      <input name="generationMode" type="radio" value="recipes">
+      Рецепты
+    </label>
+    <label>
+      <input name="generationMode" type="radio" value="folkWisdom">
+      Народные мудрости
+    </label>
+    <label>
+      <input name="generationMode" type="radio" value="shortWikipedia">
+      Короче, википедия
+    </label>
+    <label>
+      <input name="generationMode" type="radio" value="movieSynopses">
+      Синопсисы фильмов
+    </label>
+  </div>
+  <h2><label for="query">Ваше начало</label></h2>
+  <textarea name="query" id="query" maxlength="500" placeholder="Введите что-нибудь, а ruGPT3 продолжит" spellcheck="true"></textarea>
+  <button name="generate" value="generate">Сгенерировать!</button>
+  <h2>Сгенерированное продолжение</h2>
+  <p id="generationResult">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pharetra ante quis scelerisque tristique. Donec lorem nisl, scelerisque et sem et, semper vehicula lacus. Sed fringilla facilisis velit nec consectetur. Praesent elementum id quam vitae laoreet. Integer lorem nibh, malesuada et pretium a, gravida ut lacus. Vivamus suscipit odio dictum nisi dictum feugiat. Quisque vestibulum ipsum eget metus iaculis sagittis et eget neque. Nullam quis lacinia justo, vitae consequat diam viverra.</p>
+
+
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
