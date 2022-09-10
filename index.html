@@ -30,40 +30,51 @@
     <p>Варианты стилизации:</p>
     <label>
       <input checked name="generationMode" type="radio" value="noStyle">
-      Без стиля
+      <span>Без стиля</span>
     </label>
     <label>
       <input name="generationMode" type="radio" value="boyQuotes">
-      Пацанские цитаты
+      <span>Пацанские цитаты</span>
     </label>
     <label>
       <input name="generationMode" type="radio" value="instructions">
-      Инструкции по применению
+      <span>Инструкции по применению</span>
     </label>
     <label>
       <input name="generationMode" type="radio" value="recipes">
-      Рецепты
+      <span>Рецепты</span>
     </label>
     <label>
       <input name="generationMode" type="radio" value="folkWisdom">
-      Народные мудрости
+      <span>Народные мудрости</span>
     </label>
     <label>
       <input name="generationMode" type="radio" value="shortWikipedia">
-      Короче, википедия
+      <span>Короче, википедия</span>
     </label>
     <label>
       <input name="generationMode" type="radio" value="movieSynopses">
-      Синопсисы фильмов
+      <span>Синопсисы фильмов</span>
     </label>
   </div>
   <h2><label for="query">Ваше начало</label></h2>
   <textarea name="query" id="query" maxlength="500" placeholder="Введите что-нибудь, а ruGPT3 продолжит" spellcheck="true"></textarea>
-  <button name="generate" value="generate">Сгенерировать!</button>
-  <h2>Сгенерированное продолжение</h2>
-  <p id="generationResult">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pharetra ante quis scelerisque tristique. Donec lorem nisl, scelerisque et sem et, semper vehicula lacus. Sed fringilla facilisis velit nec consectetur. Praesent elementum id quam vitae laoreet. Integer lorem nibh, malesuada et pretium a, gravida ut lacus. Vivamus suscipit odio dictum nisi dictum feugiat. Quisque vestibulum ipsum eget metus iaculis sagittis et eget neque. Nullam quis lacinia justo, vitae consequat diam viverra.</p>
-
-
+  <button name="generate" value="generate" onclick="generate()">Сгенерировать!</button>
+  <div id="generation">
+    <h2>Сгенерированное продолжение</h2>
+    <p id="generationResult">
+      <svg height="40" width="40" id="generationResultAnimation">
+        <circle cx="20" cy="20" r="17" fill="#e3e3e3" />
+        <circle cx="20" cy="20" r="15" stroke="#428bca" stroke-width="4" fill="#e3e3e3" />
+        <circle cx="20" cy="20" r="14" fill="white" />
+      </svg>
+      <span id="generationResultField"></span>
+    </p>
+  </div>
+  <footer>
+    <a href="404.html">Условия использования и приватность</a><a href="404.html">Как это сделано</a>
+    <span>2022</span>
+  </footer>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>

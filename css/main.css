@@ -293,6 +293,10 @@ div#generationMenu label {
   margin-right: 10px;
 }
 
+input:checked + span {
+  font-weight: bold;
+}
+
 h2 {
   margin-left: 20px;
   font-size: 1em;
@@ -314,6 +318,10 @@ button {
   margin: auto;
 }
 
+div#generation {
+  display: none;
+}
+
 p#generationResult {
   margin: auto auto 15px;
   display: block;
@@ -326,5 +334,41 @@ p#generationResult {
   border-style: solid;
   border-radius: 2px;
   border-color: #767676;
+}
+
+/*CSS Ring progress bar START*/
+p#generationResult svg {
+  display: none;
+  margin: auto;
+  transform: rotate(-90deg);
+  stroke-dasharray: 94.25; /* (2PI * 40px) */
+  stroke-dashoffset: 94.25;
+  animation: offsettozero 30s linear forwards;
+}
+
+@keyframes offsettozero {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+/*CSS Ring progress bar END*/
+
+footer {
+  margin-left: 20px;
+  margin-bottom: 0.67em;
+}
+
+footer a {
+  padding-right: 10px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer span {
+  float: right;
+  margin-right: 20px;
 }
 
