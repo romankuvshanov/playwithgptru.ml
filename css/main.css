@@ -318,7 +318,7 @@ button {
   margin: auto;
 }
 
-div#generation {
+div#generationDiv {
   display: none;
 }
 
@@ -343,7 +343,7 @@ p#generationResult svg {
   transform: rotate(-90deg);
   stroke-dasharray: 94.25; /* (2PI * 40px) */
   stroke-dashoffset: 94.25;
-  animation: offsettozero 30s linear forwards;
+  animation: offsettozero 35s linear forwards;
 }
 
 @keyframes offsettozero {
