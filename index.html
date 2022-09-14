@@ -1,15 +1,15 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="ru">
 
 <head>
   <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
+  <title>playwithgptru.ml - yandex's balabola like service</title>
+  <meta name="description" content="playwithgptru.ml - yandex's balabola like service">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
+  <meta property="og:title" content="playwithgptru.ml - yandex's balabola like service">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://playwithgptru.ml/">
   <meta property="og:image" content="">
 
   <link rel="manifest" href="site.webmanifest">
@@ -25,40 +25,40 @@
 <body>
 
   <!-- Add your site or application content here -->
-  <h1><a href="playwithgptru.ml">PlayWithGPTru.ml</a></h1>
+  <h1><a href="index.html">PlayWithGPTru.ml</a></h1>
   <div id="generationMenu">
     <p>Варианты стилизации:</p>
     <label>
-      <input checked name="generationMode" type="radio" value="noStyle">
+      <input checked name="generationMode" type="radio" value="noStyle" onchange="updateTextarea(this.value)">
       <span>Без стиля</span>
     </label>
+<!--    <label>-->
+<!--      <input name="generationMode" type="radio" value="boyQuotes" onchange="updateTextarea(this.value)">-->
+<!--      <span>Пацанские цитаты</span>-->
+<!--    </label>-->
     <label>
-      <input name="generationMode" type="radio" value="boyQuotes">
-      <span>Пацанские цитаты</span>
-    </label>
-    <label>
-      <input name="generationMode" type="radio" value="instructions">
+      <input name="generationMode" type="radio" value="instructions" onchange="updateTextarea(this.value)">
       <span>Инструкции по применению</span>
     </label>
     <label>
-      <input name="generationMode" type="radio" value="recipes">
+      <input name="generationMode" type="radio" value="recipes" onchange="updateTextarea(this.value)">
       <span>Рецепты</span>
     </label>
     <label>
-      <input name="generationMode" type="radio" value="folkWisdom">
+      <input name="generationMode" type="radio" value="folkWisdom" onchange="updateTextarea(this.value)">
       <span>Народные мудрости</span>
     </label>
     <label>
-      <input name="generationMode" type="radio" value="shortWikipedia">
+      <input name="generationMode" type="radio" value="shortWikipedia" onchange="updateTextarea(this.value)">
       <span>Короче, википедия</span>
     </label>
     <label>
-      <input name="generationMode" type="radio" value="movieSynopses">
+      <input name="generationMode" type="radio" value="movieSynopses" onchange="updateTextarea(this.value)">
       <span>Синопсисы фильмов</span>
     </label>
   </div>
   <h2><label for="query">Ваше начало</label></h2>
-  <textarea name="query" id="query" maxlength="500" placeholder="Введите что-нибудь, а ruGPT3 продолжит" spellcheck="true"></textarea>
+  <textarea name="query" id="query" maxlength="500" placeholder="Введите что-нибудь, а ruGPT3 продолжит. Например: Сингапур стал первой страной, разрешившей" spellcheck="true"></textarea>
   <button name="generate" id="generate" value="generate" onclick="generate()">Сгенерировать!</button>
   <div id="generationDiv">
     <h2>Сгенерированное продолжение</h2>
