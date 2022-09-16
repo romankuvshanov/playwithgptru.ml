@@ -10,7 +10,7 @@
   <meta property="og:title" content="playwithgptru.ml - yandex's balabola like service">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://playwithgptru.ml/">
-  <meta property="og:image" content="">
+  <meta property="og:image" content="tile-wide.png">
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
@@ -23,8 +23,6 @@
 </head>
 
 <body>
-
-  <!-- Add your site or application content here -->
   <h1><a href="index.html">PlayWithGPTru.ml</a></h1>
   <div id="generationMenu">
     <p>Варианты стилизации:</p>
@@ -32,10 +30,10 @@
       <input checked name="generationMode" type="radio" value="noStyle" onchange="updateTextarea(this.value)">
       <span>Без стиля</span>
     </label>
-<!--    <label>-->
-<!--      <input name="generationMode" type="radio" value="boyQuotes" onchange="updateTextarea(this.value)">-->
-<!--      <span>Пацанские цитаты</span>-->
-<!--    </label>-->
+    <label>
+      <input name="generationMode" type="radio" value="boyQuotes" onchange="updateTextarea(this.value)">
+      <span>Пацанские цитаты</span>
+    </label>
     <label>
       <input name="generationMode" type="radio" value="instructions" onchange="updateTextarea(this.value)">
       <span>Инструкции по применению</span>
@@ -68,6 +66,7 @@
         <circle cx="20" cy="20" r="15" stroke="black" stroke-width="4" fill="#e3e3e3" />
         <circle cx="20" cy="20" r="14" fill="white" />
       </svg>
+      <span id="generationQueryField"></span>
       <span id="generationResultField"></span>
     </p>
   </div>
@@ -79,13 +78,9 @@
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>
 
 </html>
+<!--
+TODO: 1. Переделать запросы на POST
+-->

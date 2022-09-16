@@ -336,6 +336,10 @@ p#generationResult {
   border-color: #767676;
 }
 
+span#generationQueryField {
+  font-weight: bold;
+}
+
 /*CSS Ring progress bar START*/
 p#generationResult svg {
   display: none;
