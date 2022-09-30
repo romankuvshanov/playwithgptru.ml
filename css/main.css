@@ -358,6 +358,7 @@ p#generationResult svg {
 /*CSS Ring progress bar END*/
 
 footer {
+  margin-top: 20px;
   margin-left: 20px;
   margin-bottom: 0.67em;
 }
@@ -374,5 +375,15 @@ footer a:hover {
 footer span {
   float: right;
   margin-right: 20px;
+  margin-bottom: 0.67em;
 }
 
+p#rulesAndPrivacy {
+  margin: 0 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  footer a {
+    display: block;
+  }
+}
