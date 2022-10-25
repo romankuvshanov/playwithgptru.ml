@@ -30,43 +30,21 @@ function updateResults(result) {
 
 async function generate() {
   // If we have something in query textarea
-  let query = document.getElementById("query").value;
-  console.log(query);
+  const query = document.getElementById("query").value;
+  const generationMode = document.querySelector('input[name="generationMode"]:checked').value;
   if (query) {
     resetOutputField();
-    let prompt = makePrompt(query);
-    console.log(prompt);
-    let result = await getPredictionFromAPI(prompt);
-    console.log(result.predictions);
-    let resultReplaced = result.predictions.replace(prompt, "");
-    updateResults(trimResult(resultReplaced));
+    let prompt = makePrompt(query, generationMode);
+    let predictionResult = await getPredictionFromAPI(prompt);
+    let resultWithoutPrompt = predictionResult.predictions.replace(prompt, "");
+    updateResults(trimResult(resultWithoutPrompt, generationMode));
   }
   else {
     alert("Вы ничего не ввели! Введите ваш запрос в поле под загловком \"Ваше начало\".");
   }
 }
 
-// async function getPredictionFromAPI(query) {
-//   const response = await fetch('https://twilight-disk-a8a4.kuvshanovr4457.workers.dev/?query=' + query);
-//   if (response.ok) {
-//     return await response.json();
-//   }
-//   else return { predictions:"Ошибка обработки запроса! Попробуйте снова!" };
-// }
-
-async function getPredictionFromAPI(jsonQuery) {
-  const response = await fetch('https://billowing-waterfall-d7b2.kuvshanovr4457.workers.dev/', {
-    method: 'POST',
-    body: JSON.stringify({text:jsonQuery}),
-  });
-  if (response.ok) {
-    return await response.json();
-  }
-  else return { predictions:"Ошибка обработки запроса! Попробуйте снова!" };
-}
-
-function makePrompt(query) {
-  let generationMode = document.querySelector('input[name="generationMode"]:checked').value;
+function makePrompt(query, generationMode) {
   switch (generationMode) {
     case 'noStyle':
       return query;
@@ -85,8 +63,7 @@ function makePrompt(query) {
   }
 }
 
-function trimResult(result) {
-  let generationMode = document.querySelector('input[name="generationMode"]:checked').value;
+function trimResult(result, generationMode) {
   switch (generationMode) {
     case 'noStyle':
       return result;
@@ -105,59 +82,43 @@ function trimResult(result) {
   }
 }
 
-function trimResponse(response) {
-  return response.substring(makePrompt(document.getElementById("query").value).length);
-}
-
-// window.addEventListener('input', function (e) {
-//   console.log("input event detected! coming from this element:", e.target);
-// }, false);
-
 function updateTextarea(value) {
   switch (value) {
     case 'noStyle':
-      document.getElementById("query").placeholder = "Введите что-нибудь, а ruGPT3 продолжит. Например: Сингапур стал первой страной, разрешившей";
+      document.getElementById("query").placeholder = "Введите что-нибудь, а нейросеть продолжит. Например: Сингапур стал первой страной, разрешившей";
       break;
     case 'boyQuotes':
-      document.getElementById("query").placeholder = "Введите начало цитаты, а ruGPT3 продолжит её в \"пацанском стиле\". Например: Он хотел лишь одного";
+      document.getElementById("query").placeholder = "Введите начало цитаты, а нейросеть продолжит её в \"пацанском стиле\". Например: Он хотел лишь одного";
       break;
     case 'instructions':
-      document.getElementById("query").placeholder = "Придумайте предмет, а ruGPT3 напишет инструкцию к нему. Например: Компьютер:";
+      document.getElementById("query").placeholder = "Придумайте предмет, а нейросеть напишет инструкцию к нему. Например: Компьютер:";
       break;
     case 'recipes':
-      document.getElementById("query").placeholder = "Введите ингредиенты, а ruGPT3 напишет к ним рецепт. Например: Свекла, вода, мясо, картошка, капуста, лук, соль.";
+      document.getElementById("query").placeholder = "Введите ингредиенты, а нейросеть напишет к ним рецепт. Например: Свекла, вода, мясо, картошка, капуста, лук, соль.";
       break;
     case 'folkWisdom':
-      document.getElementById("query").placeholder = "Введите что-нибудь, а ruGPT3 выдаст народную мудрость. Например: Многое в жизни";
+      document.getElementById("query").placeholder = "Введите что-нибудь, а нейросеть выдаст народную мудрость. Например: Многое в жизни";
       break;
     case 'shortWikipedia':
-      document.getElementById("query").placeholder = "Придумайте предмет, а ruGPT3 придумает к нему описание. Например: Короче, Компьютер";
+      document.getElementById("query").placeholder = "Придумайте предмет, а нейросеть придумает к нему описание. Например: Короче, Компьютер";
       break;
     case 'movieSynopses':
-      document.getElementById("query").placeholder = "Напишите название фильма, а ruGPT3 придумает к нему синопсис. Например: Назад в будущее:";
+      document.getElementById("query").placeholder = "Напишите название фильма, а нейросеть придумает к нему синопсис. Например: Назад в будущее:";
       break;
   }
 }
 
+async function getPredictionFromAPI(jsonQuery) {
+  const response = await fetch('https://playwithgptru.drgondai.workers.dev/', {
+    method: 'POST',
+    body: JSON.stringify({text:jsonQuery}),
+  });
+  if (response.ok) {
+    return await response.json();
+  }
+  else return { predictions:"Ошибка обработки запроса! Попробуйте снова!" };
+}
 
-//https://faas-blr1-8177d592.doserverless.co/api/v1/web/fn-0354e1f4-a10b-47ac-93a0-2ffee32414e2/default/playwithgptru?query=
-// function generate2() {
-//   if (document.getElementById("query").value) {
-//     if (document.getElementById("generationDiv").style.display == 'none') {
-//       alert("none");
-//     }
-//
-//     document.getElementById("generationDiv").style.display = "block";
-//     document.getElementById("generationResultAnimation").style.display = "block";
-//
-//      getPredictionFromAPI("query");
-//   }
-//   else {
-//     alert("Вы ничего не ввели! Введите ваш запрос в поле под загловком \"Ваше начало\".");
-//   }
-//
-// }
-// TODO: Refactoring
-// TODO: Change icons make commit with final html 404 and icons
 // TODO: Go through awesome frontend
 // TODO: Readme.md
+// TODO: Optimize images

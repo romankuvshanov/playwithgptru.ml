@@ -25,7 +25,6 @@ const headers = {
 
 async function handleRequest(request) {
   const jsonRequest = await request.json();
-  console.log(jsonRequest);
   const jsonPrediction = await getPrediction(jsonRequest);
   let response = new Response(JSON.stringify(jsonPrediction));
   response.headers.set("Access-Control-Allow-Origin", "*");
