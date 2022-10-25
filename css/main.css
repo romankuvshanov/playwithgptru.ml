@@ -261,6 +261,8 @@ textarea {
   }
 }
 
+/*Main section*/
+
 h1 {
   text-align: center;
   font-family: sans-serif;
@@ -378,9 +380,12 @@ footer span {
   margin-bottom: 0.67em;
 }
 
+/* Rules and privacy page */
 p#rulesAndPrivacy {
   margin: 0 20px;
 }
+
+/* Media queries */
 
 @media only screen and (max-width: 500px) {
   footer a {

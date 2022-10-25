@@ -158,3 +158,6 @@ function updateTextarea(value) {
 //
 // }
 // TODO: Refactoring
+// TODO: Change icons make commit with final html 404 and icons
+// TODO: Go through awesome frontend
+// TODO: Readme.md

@@ -3,11 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <title>playwithgptru.ml - yandex's balabola like service</title>
-  <meta name="description" content="playwithgptru.ml - yandex's balabola like service">
+  <title>playwithgptru.ml - yandex's balaboba like service</title>
+  <meta name="description" content="playwithgptru.ml - yandex's balaboba like service">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:title" content="playwithgptru.ml - yandex's balabola like service">
+  <meta property="og:title" content="playwithgptru.ml - yandex's balaboba like service">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://playwithgptru.ml/">
   <meta property="og:image" content="tile-wide.png">
@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#fafafa">
+  <!-- TODO: Fix link to cloudflare worker -->
+  <link rel="dns-prefetch" href="https://billowing-waterfall-d7b2.kuvshanovr4457.workers.dev/">
 </head>
 
 <body>
@@ -56,7 +58,7 @@
     </label>
   </div>
   <h2><label for="query">Ваше начало</label></h2>
-  <textarea name="query" id="query" maxlength="500" placeholder="Введите что-нибудь, а ruGPT3 продолжит. Например: Сингапур стал первой страной, разрешившей" spellcheck="true"></textarea>
+  <textarea name="query" id="query" maxlength="500" placeholder="Введите что-нибудь, а нейросеть продолжит. Например: Сингапур стал первой страной, разрешившей" spellcheck="true"></textarea>
   <button name="generate" id="generate" value="generate" onclick="generate()">Сгенерировать!</button>
   <div id="generationDiv">
     <h2>Сгенерированное продолжение</h2>
@@ -81,6 +83,3 @@
 </body>
 
 </html>
-<!--
-TODO:
--->
