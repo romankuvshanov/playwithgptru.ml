@@ -8,6 +8,10 @@ In this project I have made frontend realisation of text generation service like
 
 ## Screenshots
 <img width="960" alt="Снимок экрана 2022-11-01 151127" src="https://user-images.githubusercontent.com/83648973/199210654-b5fe0e82-78d0-431d-8180-d83a6752109b.png">
+![image(3)](https://user-images.githubusercontent.com/83648973/199212603-4703ceb1-fdd6-4f5a-bcf3-6d6b95df9d4d.png)
+![image](https://user-images.githubusercontent.com/83648973/199212609-4e32106c-f27c-44a9-95ab-93b16ff61edb.png)
+![image(2)](https://user-images.githubusercontent.com/83648973/199212615-c11ac5b9-30fc-4218-a5db-232cf13804dc.png)
+![image(1)](https://user-images.githubusercontent.com/83648973/199212623-31df8d5c-cd6e-48b6-a9ce-1ba74f63523c.png)
 
 
 
