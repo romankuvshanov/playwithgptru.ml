@@ -5,6 +5,7 @@ My frontend realisation of yandex's balaboba. Backend based on neural network AP
 In this project I have made frontend realisation of text generation service like yandex's balaboba. I have used publicly avaliable neural network API. I have used the technique called zero-shot learning in order to achieve differnt text geneartion styles for different prompts. Making this project I have learned basic js syntax, fetch api, basic css and html. For a template I have used html5 boilerplate. For a deployment I have used github pages, because it provides CDN and it was a simple way to deploy my staic frontend project.
 
 ## Scheme
+![plauwithgptru drawio](https://user-images.githubusercontent.com/83648973/199232200-72c3d59d-0199-45e2-aade-27c420d02873.png)
 
 ## Screenshots
 <img width="960" alt="Снимок экрана 2022-11-01 151127" src="https://user-images.githubusercontent.com/83648973/199210654-b5fe0e82-78d0-431d-8180-d83a6752109b.png">
@@ -17,8 +18,7 @@ In this project I have made frontend realisation of text generation service like
 
 ![image(1)](https://user-images.githubusercontent.com/83648973/199212623-31df8d5c-cd6e-48b6-a9ce-1ba74f63523c.png)
 
-
-
-
-
 ## Video
+
+
+https://user-images.githubusercontent.com/83648973/199247747-2e3cb23b-0353-401b-95e1-c024e91c0041.mp4
